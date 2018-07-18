@@ -1,6 +1,5 @@
 class Helpers
   def self.current_user(hash)
-    binding.pry
     @user = User.find(hash[:user_id])
   end
 
