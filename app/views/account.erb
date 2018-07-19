@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% if User.is_logged_in?(session) %>
-      <% @user = User.current_user(session) %>
+    <% if Helpers.is_logged_in?(session) %>
+      <% @user = Helpers.current_user(session) %>
       <p><% = @user.username %></p>
       <% = @user.balance %></p>
     <% else %>
